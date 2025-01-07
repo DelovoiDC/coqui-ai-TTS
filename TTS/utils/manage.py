@@ -429,7 +429,7 @@ class ModelManager(object):
 
         # find downloaded files
         output_model_path = output_path
-        output_config_path = None
+        output_config_path = os.path.join(output_path, "config.json")
         if (
             model not in ["tortoise-v2", "bark"] and "fairseq" not in model_name and "xtts" not in model_name
         ):  # TODO:This is stupid but don't care for now.
