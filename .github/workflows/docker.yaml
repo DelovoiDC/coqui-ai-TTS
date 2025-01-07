@@ -29,11 +29,11 @@ jobs:
         id: compute-tag
         run: |
           set -ex
-          base="ghcr.io/idiap/coqui-tts"
+          base="ghcr.io/delovoidc/coqui-tts"
           tags="" # PR build
 
           if [[ ${{ matrix.base }} = "python:3.10.8-slim" ]]; then
-            base="ghcr.io/idiap/coqui-tts-cpu"
+            base="ghcr.io/delovoidc/coqui-tts-cpu"
           fi
 
           if [[ "${{ startsWith(github.ref, 'refs/heads/') }}" = "true" ]]; then
@@ -83,11 +83,11 @@ jobs:
         id: compute-tag
         run: |
           set -ex
-          base="ghcr.io/idiap/coqui-tts-dev"
+          base="ghcr.io/delovoidc/coqui-tts-dev"
           tags="" # PR build
 
           if [[ ${{ matrix.base }} = "python:3.10.8-slim" ]]; then
-            base="ghcr.io/idiap/coqui-tts-dev-cpu"
+            base="ghcr.io/delovoidc/coqui-tts-dev-cpu"
           fi
 
           if [[ "${{ startsWith(github.ref, 'refs/heads/') }}" = "true" ]]; then
